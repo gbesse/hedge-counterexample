@@ -1,0 +1,54 @@
+{
+  "id": "timezone-gap",
+  "fictional": true,
+  "events": {
+    "fictional_launch": {
+      "start": "2026-10-20T20:00:00Z",
+      "end": "2026-10-21T04:00:00Z",
+      "allow_absent": true
+    }
+  },
+  "contracts": [
+    {
+      "id": "venue-A-yes",
+      "side": "yes",
+      "quantity": 10,
+      "price_cents": 45,
+      "fee_per_unit_cents": 1,
+      "fee_if_filled_cents": 2,
+      "fills": [
+        0,
+        5,
+        10
+      ],
+      "settlement": "resolved",
+      "rule": {
+        "op": "before",
+        "event": "fictional_launch",
+        "deadline": "2026-10-20T22:00:00Z"
+      }
+    },
+    {
+      "id": "venue-B-no",
+      "side": "no",
+      "quantity": 10,
+      "price_cents": 45,
+      "fee_per_unit_cents": 1,
+      "fee_if_filled_cents": 2,
+      "fills": [
+        0,
+        5,
+        10
+      ],
+      "settlement": "resolved",
+      "rule": {
+        "op": "before",
+        "event": "fictional_launch",
+        "deadline": {
+          "local": "2026-10-20T22:00:00",
+          "zone": "America/New_York"
+        }
+      }
+    }
+  ]
+}
