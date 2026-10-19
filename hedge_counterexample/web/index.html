@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Hedge Counterexample</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <header>
+      <a class="brand" href="/">HEDGE / COUNTEREXAMPLE</a>
+      <nav aria-label="Language">
+        <a href="?lang=fr">FR</a><a href="?lang=en">EN</a><a href="?lang=es">ES</a>
+      </nav>
+    </header>
+    <main>
+      <section class="intro">
+        <p class="eyebrow" data-i18n="eyebrow"></p>
+        <h1 data-i18n="title"></h1>
+        <p class="lede" data-i18n="lede"></p>
+      </section>
+      <section class="workspace">
+        <aside>
+          <span class="number">01 /</span>
+          <h2 data-i18n="assumptions"></h2>
+          <label class="field" for="example" data-i18n="example"></label
+          ><select id="example">
+            <option value="timezone-gap" data-i18n="timezone-gap"></option>
+            <option value="partial-fill-gap" data-i18n="partial-fill-gap"></option></select
+          ><label class="toggle"
+            ><input type="checkbox" id="partial" checked /><span data-i18n="partial"></span></label
+          ><label class="toggle"
+            ><input type="checkbox" id="unresolved" /><span data-i18n="unresolved"></span></label
+          ><button id="analyze" data-i18n="analyze"></button>
+          <p role="status" id="status"></p>
+          <p class="hint" data-i18n="fictional"></p>
+          <p class="hint" data-i18n="scope"></p>
+        </aside>
+        <article>
+          <div class="section-head">
+            <div>
+              <span class="number">02 /</span>
+              <h2 data-i18n="witness"></h2>
+            </div>
+            <span class="badge" data-i18n="replayed"></span>
+          </div>
+          <div class="metrics">
+            <div><strong id="worst">—</strong><span data-i18n="worst"></span></div>
+            <div><strong id="full">—</strong><span data-i18n="full"></span></div>
+            <div><strong id="trials">—</strong><span data-i18n="trials"></span></div>
+          </div>
+          <p id="pending" class="cash" hidden></p>
+          <h3 data-i18n="deadlines"></h3>
+          <div id="deadlines"></div>
+          <h3 data-i18n="event"></h3>
+          <div id="timeline" class="timeline"></div>
+          <h3 data-i18n="legs"></h3>
+          <div id="legs"></div>
+          <p class="hint" data-i18n="fees"></p>
+          <div class="actions">
+            <button id="download" class="secondary" data-i18n="download"></button
+            ><code id="digest"></code>
+          </div>
+        </article>
+      </section>
+      <footer>
+        <p data-i18n="limits"></p>
+        <a href="https://github.com/gbesse/hedge-counterexample">GitHub ↗</a>
+      </footer>
+    </main>
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>

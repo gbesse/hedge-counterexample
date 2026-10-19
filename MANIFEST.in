@@ -1,0 +1,3 @@
+recursive-include hedge_counterexample/web *
+recursive-include hedge_counterexample/examples *
+include README*.md LICENSE

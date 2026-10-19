@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hedge-counterexample"
+version = "0.1.0a1"
+description = "Contre-exemples de couverture · Hedge counterexamples · Contraejemplos de cobertura"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+dependencies = []
+
+[project.scripts]
+hedge-counterexample = "hedge_counterexample.__main__:main"
+
+[tool.setuptools.packages.find]
+include = ["hedge_counterexample*"]
+
+[tool.setuptools.package-data]
+hedge_counterexample = ["web/*", "examples/*"]
